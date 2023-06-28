@@ -1,4 +1,4 @@
-const launches = new map();
+const launches = new Map();
 
 const launch = {
   flightNumber: 100,

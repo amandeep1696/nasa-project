@@ -7,19 +7,6 @@ const DEFAULT_FLIGHT_NUMBER = 100;
 
 const SPACEX_API_URL = 'https://api.spacexdata.com/v4/launches/query';
 
-const launch = {
-  flightNumber: 100,
-  mission: 'Kepler Exploration X',
-  rocket: 'Explorer IS1',
-  launchDate: new Date('December 27, 2030'),
-  target: 'Kepler-442 b',
-  customers: ['NASA', 'ZTM'],
-  upcoming: true,
-  success: true,
-};
-
-saveLaunch(launch);
-
 async function populateLaunches() {
   console.log('Downloading launch data...');
   const response = await axios.post(SPACEX_API_URL, {
